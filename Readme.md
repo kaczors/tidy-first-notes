@@ -12,7 +12,7 @@ if (condition) {
 ```
 ```java
 if (condition){
-  if (some other condition){
+  if (some other condition) {
     // do something
   }
 }
