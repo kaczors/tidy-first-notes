@@ -159,7 +159,7 @@ int b = ...a...
 // more code that uses b
 ```
 
-** Chapter 8: Explaining Variables
+## Chapter 8: Explaining Variables
 Don't put too much logic in one line, use variables to explain the logic. It will be easier to understand the code and refactor later.
 
 **Don't**
