@@ -2,7 +2,7 @@
 
 ## Chapter 1: Guard Classes
 
-Don't
+**Don't**
 ```java
 if (condition) {
   // do something
@@ -40,13 +40,13 @@ if (!some other condition) {
 
 Just exclude dead code, don't comment it out. If you are not sure if it's dead, add log statements to check and then remove it.
 
-Don't
+**Don't**
 ```java
 // if (condition) {
 //  some old business logic 
 //}
 ```
-Do
+**Do**
 ```java
 ```
 ;)
@@ -55,5 +55,40 @@ or eventually add a log statement and remove later
 log.info("executing some old business logic");
 if (condition) {
   some old business logic
+}
+```
+
+## Chapter 3: Normalize Symmetries
+
+For similar (pr the same) logic patterns use the same code structure.
+
+**Don't**
+```java
+method1(String foo) {
+  if (foo != null){
+    return foo;
+  }
+  return 5;
+}
+
+method2(String foo) {
+  return foo == null 
+    ? 5 
+    : foo;
+}
+```
+
+**Do** (method logic is just the exmple, the point is to use the same structure)
+```java
+method1(String foo) {
+  return foo == null 
+    ? 5 
+    : foo;
+}
+
+method2(String foo) {
+  return foo == null 
+    ? 5 
+    : foo;
 }
 ```
