@@ -138,3 +138,22 @@ class Stuff {
   updateUser() {}
 }
 ```
+## Chapter 7: Move Declaration and Initialization Together
+If you declare a variable and initialize it later, it's harder to understand the code. Try to move the initialization to the declaration.
+**Don't**
+```java
+int a;
+// some logic that doesn't use a
+a = ...;
+int b;
+// more code
+b = ...a...
+// more code
+```
+**Do**
+```java
+int a = ...;
+// more code that uses a
+int b = ...a...
+// more code that uses b
+```
