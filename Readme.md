@@ -179,3 +179,19 @@ if (isAValid && isBValid && isCValid) {
   // some logic
 }
 ```
+## Chapter 9 Explaining Constants
+Create a symbolic constant. Replace uses of the literal constant with the symbol.
+
+**Don't**
+```java
+if (response.code == 404) {
+  // some logic
+}
+```
+**Do**
+```java
+NOT_FOUND = 404;
+if (response.code == NOT_FOUND) {
+  // some logic
+}
+```
