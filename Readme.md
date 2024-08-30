@@ -112,3 +112,29 @@ class OldImplementation implements NewInterface {
 }
 ```
 (or something like that, for example via **Adapter** pattern)
+
+## Chapter 5: Reading Order
+Use your judgement to decide how the file/class should be read in order to understand the logic better. For example, put the main logic at the top of the file, and helper methods at the bottom.
+
+## Chapter 6: Cohesion Order
+Put the methods/code that are used together close to each other. It will be easier to understand the logic and refactor later.
+
+**Don't**
+```java
+class Stuff {
+  parseXml() {}
+  createUser() {}
+  parseJson() {}
+  updateUser() {}
+}
+```
+
+**Do**
+```java
+class Stuff {
+  parseXml() {}
+  parseJson() {}
+  createUser() {}
+  updateUser() {}
+}
+```
