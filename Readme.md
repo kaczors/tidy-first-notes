@@ -92,3 +92,23 @@ method2(String foo) {
     : foo;
 }
 ```
+## Chapter 4: New Interface, Old Implementation
+Create new shiny interface (signature) which under the hood will some old nasty one, so you can refactor the implementation later without changing the interface.
+
+**Do**
+```java
+interface NewShinyInterface {
+  void niceSignature();
+}
+
+class OldImplementation implements NewInterface {
+  void niceSignature() {
+    this.oldNastyMethod();
+  }
+
+  void oldNastyMethod() {
+    // old implementation
+  }
+}
+```
+(or something like that, for example via **Adapter** pattern)
