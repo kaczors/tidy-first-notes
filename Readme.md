@@ -138,6 +138,7 @@ class Stuff {
   updateUser() {}
 }
 ```
+
 ## Chapter 7: Move Declaration and Initialization Together
 If you declare a variable and initialize it later, it's harder to understand the code. Try to move the initialization to the declaration.
 **Don't**
@@ -156,4 +157,25 @@ int a = ...;
 // more code that uses a
 int b = ...a...
 // more code that uses b
+```
+
+** Chapter 8: Explaining Variables
+Don't put too much logic in one line, use variables to explain the logic. It will be easier to understand the code and refactor later.
+
+**Don't**
+```java
+if (a > 5 && b < 10 && c == 0) {
+  // some logic
+}
+```
+
+**Do**
+```java
+boolean isAValid = a > 5;
+boolean isBValid = b < 10;
+boolean isCValid = c == 0;
+
+if (isAValid && isBValid && isCValid) {
+  // some logic
+}
 ```
