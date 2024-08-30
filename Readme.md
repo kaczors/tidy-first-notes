@@ -236,3 +236,31 @@ foo(Params
   .b(2)
   .build());
 ```
+## Chapter 11: Chunk Statements
+If you have a long method, try to split it into smaller methods. It will be easier to understand the logic.
+
+**Don't**
+```java
+method() {
+  // 100 lines of code
+  
+  // intentional space to make it more readable
+  // another 100 lines of code
+}
+```
+
+**Do**
+```java
+method() {
+  method1();
+  method2();
+}
+
+method1() {
+  // 100 lines of code
+}
+
+method2() {
+  // another 100 lines of code
+}
+```
