@@ -179,7 +179,7 @@ if (isAValid && isBValid && isCValid) {
   // some logic
 }
 ```
-## Chapter 9 Explaining Constants
+## Chapter 9: Explaining Constants
 Create a symbolic constant. Replace uses of the literal constant with the symbol.
 
 **Don't**
@@ -194,4 +194,45 @@ NOT_FOUND = 404;
 if (response.code == NOT_FOUND) {
   // some logic
 }
+```
+## Chapter 10: Explicit Parameters
+Don't use global variables, pass them as parameters to the method. 
+
+Don't use map like parameters, unless you have option to call it with named parameters.
+
+**Don't**
+```java
+params = {a: 1, b: 2}
+foo(params)
+
+function foo(params) {
+  ...params.a... ...params.b...
+}
+```
+
+**Do**
+```java
+function foo(params){
+  foo_body(params.a, params.b)
+}
+
+function foo_body(a, b) {
+  ...a... ...b...
+}
+```
+```java
+interface Params {
+  int a;
+  int b;
+}
+
+function foo(Params params) {
+  ...params.a... ...params.b...
+}
+
+foo(Params
+  .builder()
+  .a(1)
+  .b(2)
+  .build());
 ```
