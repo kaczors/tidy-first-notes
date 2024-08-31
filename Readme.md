@@ -318,3 +318,5 @@ method1() {
   // rest of the logic
 }
 ```
+## Chapter 14: Explaining Comments
+If you spent more than 5 minutes to understand the code, add a comment to explain it (since probably the code isn't trivial). It will be easier to understand the code for the next reader and refactor it.
