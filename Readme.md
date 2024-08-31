@@ -264,3 +264,35 @@ method2() {
   // another 100 lines of code
 }
 ```
+## Chapter 12: Extract helper
+If you have a piece of code that is used in multiple places, extract it to a helper method.
+
+**Don't**
+```java
+method1() {
+  // some logic
+  // some common logic
+}
+
+method2() {
+  // some logic
+  // some common logic
+}
+```
+
+**Do**
+```java
+method1() {
+  // some logic
+  commonLogic();
+}
+
+method2() {
+  // some logic
+  commonLogic();
+}
+
+commonLogic() {
+  // some common logic
+}
+```
