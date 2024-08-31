@@ -320,3 +320,21 @@ method1() {
 ```
 ## Chapter 14: Explaining Comments
 If you spent more than 5 minutes to understand the code, add a comment to explain it (since probably the code isn't trivial). It will be easier to understand the code for the next reader and refactor it.
+
+## Chapter 15: Delete Redundant Comments
+If the comment is not explaining anything, delete it. It will be easier to understand the code.
+
+**Don't**
+```java
+String getName() {
+  // returns the name
+  return name;
+}
+```
+
+**Do**
+```java
+String getName() {
+  return name;
+}
+```
