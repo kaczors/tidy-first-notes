@@ -296,3 +296,25 @@ commonLogic() {
   // some common logic
 }
 ```
+## Chapter 13: One Pile
+Sometimes code is split into mutliple functions/helpers, sometimes poorly named. Try to put all the logic in one place in case of better understanding (as a preparation for refactoring).
+
+**Don't**
+```java
+method1() {
+  // some logic
+  poorlyNamedMethod();
+}
+
+poorlyNamedMethod() {
+  // rest of the logic
+}
+```
+
+**Do**
+```java
+method1() {
+  // some logic
+  // rest of the logic
+}
+```
